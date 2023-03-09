@@ -25,6 +25,14 @@ public class ChatAWT extends Frame implements ChatListener{
     public ChatAWT() {
         super("Chat with AWT GUI");
         chatEngine = new ChatEngine();
-        
+        chatEngine.registerChatListener(this);
+        Panel p = new Panel();
+        quitButton.setBounds(448, 280, 111, 32);
+        quitButton.setLabel("Quit");
+        quitButton.addMouseListener() {
+            new java.awt.event.MouseAdapter() {
+                public void mouseClicked(MouseEvent e)
+            }
+        }
     }
 }
